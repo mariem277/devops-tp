@@ -6,5 +6,9 @@ app = Flask(__name__)
 def hello():
     return "Hello, CI/CD!"
 
+@app.route('/status')
+def status():
+    return {"status": "OK"}, 200
+
 if __name__ == "__main__":
     app.run()
